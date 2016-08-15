@@ -1,0 +1,123 @@
+img { margin: 0; display: block; max-width: 100%;}
+.container { max-width: 880px; width: 100%; margin: 0 auto; padding: 0 32px;}
+.container { max-width: 880px; padding-top: 60px; padding-bottom: 60px; box-sizing: border-box;}
+
+@media (min-width: 750px) {
+	.container { width: 784px; }
+	.web-mobile-mocks { width: 880px;}
+	#bundle-settings .container, #smart-reply .container, #media-sharing .container { padding-top: 100px; padding-bottom: 100px;}
+}
+.green1 { background: #3AB54A; color: #e6f7e8; padding: 100px 0;}
+.green1 h3, .green2 h3, .green3 h3 { color: #fff; }
+.green2 { background: #329b3f; color: #e6f7e8; padding: 100px 0;}
+.green3 { background: #2e8e3a; color: #e6f7e8; padding: 100px 0;}
+
+.blue { background: #28affa; color: #ceedfe; padding: 100px 0;}
+.blue h3 { color: #fff; }
+
+#thanks { color: #28affa; padding-top: 300px; padding-bottom: 300px; }
+#thanks a { color: #979797;}
+section { overflow-x: hidden;}
+
+/* Hero section */
+#hero { border-top: 2px solid #3AB54A; }
+#hero h1 { color: #3AB54A; }
+#hero h2 { color: #a8a8a8; margin-bottom: 100px;}
+.callout { color: #a8a8a8; max-width: 600px; position: relative; }
+.callout:before {
+	content:'';
+	width: 2px;
+/*	background-color: #3AB54A;*/
+	background-color: #c9c9c9;
+	height: 90%;
+	position: absolute;
+	top: 5%;
+	left: -20px;
+}
+
+
+/* Web/Mobile 2 up layout */
+.web-mobile-mocks { position: relative;}
+/* Browser chrome */
+.web-mock-wrapper {
+	position: absolute;
+	border-radius: 4px;
+	width: 520px;
+	transform: translateX(50%);
+	box-shadow: 0 2px 6px rgba(0,0,0,.15);
+	overflow: hidden;
+	border: 1px solid rgba(0,0,0,.1);}
+.browser-heading { 
+
+	height: 20px;
+
+	width: 100%;
+	background-color: white;
+	box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+.circle {
+	float: left;
+	margin-left: 6px;
+	border-radius: 50%;
+
+	height: 6px;
+	width: 6px;
+	box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+	margin-top: 8px;
+}
+.circle:first-child { background-color: #FF5F56; margin-left: 8px; }
+.circle + .circle { background-color: #FFBD2E; }
+.circle + .circle + .circle { background-color: #27C93F; }
+
+.mobile-mock-wrapper {
+	width: 200px;
+
+}
+.mobile-mock-wrapper .mock { position: relative; z-index: +1;}
+.mock.video { max-width: 100%;}
+.nexus, .iphone {
+	position: absolute;
+	width: 232px;
+	left:16px;
+	top: 20px;
+}
+img.iphone { max-width: none;}
+.iphone {
+	width: 274px;
+	left: -17px;
+	top: 34px;
+}
+
+/*.mobile-mock-wrapper.android:before {
+	content: '';
+	background: url("../images/nexus-phone.png") center center no-repeat;
+	width: 240px;
+	height: 600px;
+	position: absolute;
+}*/
+@media (min-width: 550px) {
+	.browser-heading { 
+		height: 30px;
+	}
+	.circle {
+		height: 10px;
+		width: 10px;
+		margin-left: 10px;
+		margin-top: 10px;}
+	}
+.mobile-mock .mock { margin: 0 auto;}
+/* Single phone image section */
+.mobile-mocks .mobile-mock-wrapper{ position: relative; }
+.mobile-mocks img.nexus { left: -10px; top: 55px; max-width: none; width: 260px;}
+.mobile-mocks .mobile-mock-wrapper { padding-top: 100px; width: 240px; margin: 0 auto;}
+::selection { background: #3AB54A; color: white;}
+@media (min-width: 750px) {
+	.mobile-mocks .mobile-mock-wrapper { float:left; padding-top: 0; }
+	.mobile-mocks img.nexus { top: -45px;}
+	.mobile-mocks img.iphone { top: -65px;}
+	.mobile-mocks .mobile-text { float: right; width: 400px;}
+	.mobile-text { padding-top: 40px;}
+	.mobile-mocks.inverted .mobile-mock-wrapper { float: right; }
+	.mobile-mocks.inverted .mobile-text { float: left; }
+	}
+/*::selection { color: #3AB54A; background: white; }*/
