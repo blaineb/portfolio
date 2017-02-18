@@ -1,2 +1,17 @@
-h1 Welcome to Harp.
-h3 This is yours to own. Enjoy.
+section#hi
+	.row
+		div#intro
+			h1 Blaine Billingsley
+			p I am a software designer interested in making people's lives easier and more enjoyable.  I believe that the best design is invisible, delightful, and light-hearted.
+		// TODO: Eventually my beautiful head will go here.
+		// img(src=)
+section#work
+	.row
+		for work, slug in public.work._data
+			article
+				a(href="/work/#{ slug }"): img(src="//placekitten.com/480/240")
+				h3: a(href="/work/#{ slug }")= work.title
+				p= work.tagline
+section#about
+	.row
+		h3 About me
