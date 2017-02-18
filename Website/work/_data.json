@@ -1,0 +1,25 @@
+{
+   "pattern": {
+     "title": "Pattern",
+     "tagline" : "A notepad for salespeople",
+     "image" : "thumbnails/pattern.png"
+   },
+
+   "inbox": {
+     "title": "Inbox by Gmail",
+     "tagline" : "Fresh take on an old paradifm",
+     "image" : "thumbnails/inbox.png"
+   },
+
+   "academia": {
+     "title": "Academia.edu",
+     "tagline" : "Accelerating the world's research",
+     "image" : "thumbnails/academia.png"
+   },
+
+   "taddler": {
+     "title": "Taddler",
+     "tagline" : "Do chores and shame your friends",
+     "image" : "thumbnails/taddler.png"
+   }
+ }
