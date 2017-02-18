@@ -1,13 +1,13 @@
 {
    "pattern": {
      "title": "Pattern",
-     "tagline" : "A notepad for salespeople",
+     "tagline" : "The notepad for salespeople",
      "image" : "thumbnails/pattern.png"
    },
 
    "inbox": {
      "title": "Inbox by Gmail",
-     "tagline" : "Fresh take on an old paradifm",
+     "tagline" : "The inbox that goes beyond email",
      "image" : "thumbnails/inbox.png"
    },
 
