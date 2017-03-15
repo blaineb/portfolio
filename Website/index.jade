@@ -1,21 +1,38 @@
-section#hi
+section#hi.section.hero-text
 	.row
 		div#intro
 			h1 Blaine Billingsley
 			h4 I am an Experience Designer in Oakland, CA
 		// TODO: Eventually my beautiful head will go here.
 		// img(src=)
-section#works
+section#works.section
 	//- .section-header: h6 Work
 	.row
 		for work, slug in public.work._data
 			article.article.one-half.column
-				a(class="thumbnail-wrapper thumbnail-#{ slug }" href="/work/#{ slug }")
+				a(style="background-color: #{work.bg};" class="thumbnail-wrapper thumbnail-#{ slug }" href="/work/#{ slug }")
 					img(class="thumbnail" src="/images/thumbnails/#{ slug }.png")
-					img(class="logo" src="/images/thumbnails/#{ slug }_logo.png")
+					//- img(class="logo" src="/images/thumbnails/#{ slug }_logo.png")
 				h3: a(href="/work/#{ slug }")= work.title
 				p= work.tagline
-section#music
-	.section-header: h6 Music
-section#writing
-	.section-header: h6 Writing
+				//- p.roles= work.roles
+section#music.pd-b-xl
+	.section-header.pd-b-xl: h6 Music
+	.row
+		for music in public.music._data
+			a.one-third.column.album-links(href="#{music.url}" target="_blank")
+				img(class="album-cover" src="#{music.image}")
+				.album-text
+					h3= music.title
+					p= music.tagline
+//- section#music.pd-b-xl
+//- 	.section-header.pd-b-xl: h6 Around the web
+//- 	.row
+//- 		for music in public.music._data
+//- 			a.one-third.column.album-links(href="#{music.url}" target="_blank")
+//- 				img(class="album-cover" src="#{music.image}")
+//- 				.album-text
+//- 					h3= music.title
+//- 					p= music.tagline
+
+

@@ -1,25 +1,47 @@
 {
+  "Robin": {
+     "title": "Robin",
+     "tagline" : "Share your chores, shame your friends",
+     "roles" : "Product management, design, concept",
+     "bg" : "#B2EB50",
+     "coming-soon" : true
+   },
    "pattern": {
      "title": "Pattern",
      "tagline" : "The notepad for salespeople",
-     "image" : "thumbnails/pattern.png"
+     "roles" : "User experience, research, visual design",
+     "bg" : "#B2EB50",
+     "coming-soon" : false
    },
 
    "inbox": {
      "title": "Inbox by Gmail",
      "tagline" : "The inbox that goes beyond email",
-     "image" : "thumbnails/inbox.png"
+     "roles" : "Interaction design, conceptual design",
+     "bg" : "#3FCFB1",
+     "coming-soon" : false
    },
-
-   "academia": {
+    "google-apps": {
+     "title": "Google Apps",
+     "tagline" : "Consistent sharing across all of gSuite",
+     "roles" : "Interaction design",
+     "bg" : "#3FCFB1",
+     "coming-soon" : true
+   },
+    "academia": {
      "title": "Academia.edu",
      "tagline" : "Accelerating the world's research",
-     "image" : "thumbnails/academia.png"
+     "roles" : "User experience, research, product management",
+     "bg" : "#0F84DE",
+     "coming-soon" : true
    },
-
-   "taddler": {
-     "title": "Taddler",
-     "tagline" : "Do chores and shame your friends",
-     "image" : "thumbnails/taddler.png"
+    "framer": {
+     "title": "Framer.js Community",
+     "tagline" : "Contributions to community of Framer designers",
+     "roles" : "Mentorship, examples, modules",
+     "bg" : "#0F84DE",
+     "coming-soon" : true
    }
  }
+
+
