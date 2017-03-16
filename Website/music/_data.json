@@ -1,0 +1,19 @@
+{
+   "special-interests": {
+     "title": "The Special Interests",
+     "tagline" : "Second solo guitar EP",
+     "image" : "/images/music/special-interests.jpg"
+   },
+   "sticks": {
+     "title": "Sticks",
+     "tagline" : "First solo guitar EP",
+     "image" : "/images/music/sticks.jpg"
+   },
+   "tusitala": {
+     "title": "Tusitala",
+     "tagline" : "First solo guitar EP",
+     "image" : "/images/music/tusitala.jpg"
+   }
+
+
+ }
