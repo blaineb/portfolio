@@ -9,30 +9,29 @@ section#works.section
 	//- .section-header: h6 Work
 	.row
 		for work, slug in public.work._data
-			article.article.one-half.column
-				a(style="background-color: #{work.bg};" class="thumbnail-wrapper thumbnail-#{ slug }" href="/work/#{ slug }")
-					img(class="thumbnail" src="/images/thumbnails/#{ slug }.png")
-					//- img(class="logo" src="/images/thumbnails/#{ slug }_logo.png")
-				h3: a(href="/work/#{ slug }")= work.title
-				p= work.tagline
-				//- p.roles= work.roles
+			if !work.coming_soon 
+				article.article.one-half.column
+					a(style="background-color: #{work.bg};" class="thumbnail-wrapper thumbnail-#{ slug }" href="/work/#{ slug }")
+						img(class="thumbnail" src="/images/thumbnails/#{ slug }.png")
+						//- img(class="logo" src="/images/thumbnails/#{ slug }_logo.png")
+					h3: a(href="/work/#{ slug }")= work.title
+					p= work.tagline
+					//- p.roles= work.roles
 section#music.pd-b-xl
 	.section-header.pd-b-xl: h6 Music
 	.row
 		for music in public.music._data
-			a.one-third.column.album-links(href="#{music.url}" target="_blank")
+			a.one-third.column.image-links(href="#{music.url}" target="_blank")
 				img(class="album-cover" src="#{music.image}")
-				.album-text
+				.image-link-text
 					h3= music.title
 					p= music.tagline
-//- section#music.pd-b-xl
+//- section#around-the-web.pd-b-xl
 //- 	.section-header.pd-b-xl: h6 Around the web
 //- 	.row
-//- 		for music in public.music._data
-//- 			a.one-third.column.album-links(href="#{music.url}" target="_blank")
-//- 				img(class="album-cover" src="#{music.image}")
-//- 				.album-text
-//- 					h3= music.title
-//- 					p= music.tagline
+//- 		.three.columns
+//- 			p Life of Wonder podcast
+//- 		.three.columns
+//- 			p Something else
 
 

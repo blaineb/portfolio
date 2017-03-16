@@ -9,15 +9,12 @@ head
 	// Mobile
 	meta(name='viewport', content='width=device-width, initial-scale=1')
 
-	// Font, if you want it.
-	// link(href='//fonts.googleapis.com/css?family=Raleway:400,300,600', rel='stylesheet', type='text/css')
-
 	// CSS
 	link(rel='stylesheet', href='/css/normalize.css')
 	link(rel='stylesheet', href='/css/billingsley.css')
 
 	// Favicon
-	link(rel='icon', type='image/png', href='images/favicon.png')
+	link(rel='icon', type='image/png', href='/images/favicon.png')
 
 	body
 		.wrapper
@@ -26,16 +23,19 @@ head
 	
 	section#footer
 		.row
-			.one-third.column
-				h3 Elsewhere
-				ul
+			.six.columns.offset-by-three.centered
+				//- h3 Elsewhere
+				.social-links.pd-b-md
 					//- li: a(href="//www.twitter.com/blaineranium" target="_blank") Twitter
 					//- li: a(href="//www.facebook.com/blainebillingsley" target="_blank") Facebook
-					li: a(href="//www.bandcamp.com/blainebillingsley" target="_blank") Bandcamp
-					li: a(href="//www.dribbble.com/blaineranium" target="_blank") Dribbble
-					li: a(href="//www.youtube.com/blainebillingsley" target="_blank") Youtube
-					li: a(href="//www.twitter.com/blaineb" target="_blank") Github
+					a(href="//www.bandcamp.com/blainebillingsley" target="_blank").ic.bandcamp Bandcamp
+					a(href="//www.dribbble.com/blaineranium" target="_blank").ic.dribbble Dribbble
+					a(href="//www.youtube.com/blainebillingsley" target="_blank").ic.youtube Youtube
+					a(href="//www.twitter.com/blaineb" target="_blank").ic.github Github
 					//- li: a(href="#" target="_blank" data=) Linkedin
+				.email-me
+					h3: a(href="mailto:blainebillingsley@gmail.com") blainebillingsley&#x40;gmail.com
+
 
 	
 	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")

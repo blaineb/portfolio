@@ -1,17 +1,11 @@
 {
-  "Robin": {
-     "title": "Robin",
-     "tagline" : "Share your chores, shame your friends",
-     "roles" : "Product management, design, concept",
-     "bg" : "#B2EB50",
-     "coming-soon" : true
-   },
    "pattern": {
      "title": "Pattern",
      "tagline" : "The notepad for salespeople",
      "roles" : "User experience, research, visual design",
-     "bg" : "#B2EB50",
-     "coming-soon" : false
+     "bg" : "#FFE74C",
+     "coming_soon" : false,
+     "logoImage" : "pattern/pattern-logo.png"
    },
 
    "inbox": {
@@ -19,28 +13,37 @@
      "tagline" : "The inbox that goes beyond email",
      "roles" : "Interaction design, conceptual design",
      "bg" : "#3FCFB1",
-     "coming-soon" : false
+     "coming_soon" : false
    },
     "google-apps": {
-     "title": "Google Apps",
-     "tagline" : "Consistent sharing across all of gSuite",
+     "title": "G Suite",
+     "tagline" : "Sharing interactions for Google's apps",
      "roles" : "Interaction design",
-     "bg" : "#3FCFB1",
-     "coming-soon" : true
+     "bg" : "#38CBF4",
+     "coming_soon" : false,
+     "logoImage" : "google-apps/google-logo.png"
+   },
+  "framer": {
+     "title": "Framer.js community",
+     "tagline" : "Contributions to community of Framer designers",
+     "roles" : "Mentorship, examples, modules",
+     "bg" : "#FFAD66",
+     "coming_soon" : false,
+     "logoImage" : "framer/framer-logo.png"
    },
     "academia": {
      "title": "Academia.edu",
      "tagline" : "Accelerating the world's research",
      "roles" : "User experience, research, product management",
      "bg" : "#0F84DE",
-     "coming-soon" : true
+     "coming_soon" : true
    },
-    "framer": {
-     "title": "Framer.js Community",
-     "tagline" : "Contributions to community of Framer designers",
-     "roles" : "Mentorship, examples, modules",
-     "bg" : "#0F84DE",
-     "coming-soon" : true
+   "Robin": {
+     "title": "Robin",
+     "tagline" : "Share your chores, shame your friends",
+     "roles" : "Product management, design, concept",
+     "bg" : "#B2EB50",
+     "coming_soon" : true
    }
  }
 
