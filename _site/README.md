@@ -3,3 +3,7 @@
 - [ ] Finish Pattern page
 - [ ] Add margin to bottom of paragraphs on small screens for better spacing
 - [ ] Finish Google Apps OnePick prototype video
+- [ ] Favicon
+- [ ] Reduce size of big Google Apps bg spread.
+- [ ] Fix links to Dribbble and Youtube
+- [ ] Get photo of me!
