@@ -132,9 +132,11 @@ a:hover {
   .eleven.columns                 { width: 91.3333333333%; }
   .twelve.columns                 { width: 100%; }
 
-  .m-r-one-column { margin-right: 4.66666666667%; }
-  .m-l-one-column { margin-left: 4.66666666667%; }
-  .m-l-two-columns { margin-left: 17.3333333333%; }
+  .m-r-one-column     { margin-right: 4.66666666667%; }
+
+  .m-l-one-column     { margin-left: 4.66666666667%;  }
+  .m-l-two-columns    { margin-left: 17.3333333333%;  }
+  .m-l-three-columns  { margin-left: 26%;            }
   // Offsets for use in utility classes
   // one:     8.66666666667%
   // two:     17.3333333333%
@@ -258,7 +260,7 @@ a:hover {
 // .work-hero .row { display: flex; flex-direction: column-reverse; }
 // .work-hero .logo-column { margin-left: 0; margin-bottom: 16%;  }
 .section p.pd-b-md { padding-bottom: 24px; }
-
+.work-hero .logo-column { text-align: center; }
 .logo-column img { max-width: 256px; }
 
 @media (max-width: 769px) {
