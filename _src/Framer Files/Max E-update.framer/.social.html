@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<script type="text/javascript">
+		// This automatically sets the right viewport scale on mobile devices
+		(function() {
+ 		var scale = 1 / window.devicePixelRatio
+ 		var viewport = "width=device-width, height=device-height, initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no"
+ 		var iOS = /iPad|iPhone|iPod/.test(navigator.platform)
+ 		if (iOS) { viewport += ", shrink-to-fit=no" }
+ 		document.write("<meta name=\"viewport\" content=\"" + viewport + "\">")
+		})()
+		</script>
+
+		<link rel="apple-touch-icon" href="framer/images/icon-120.png">
+		<link rel="apple-touch-icon" href="framer/images/icon-76.png" sizes="76x76">
+		<link rel="apple-touch-icon" href="framer/images/icon-120.png" sizes="120x120">
+		<link rel="apple-touch-icon" href="framer/images/icon-152.png" sizes="152x152">
+		<link rel="apple-touch-icon" href="framer/images/icon-180.png" sizes="180x180">
+		<link rel="apple-touch-icon" href="framer/images/icon-192.png" sizes="192x192">
+
+		<link rel="stylesheet" type="text/css" href="framer/style.css?nocache=6d40bc53861208d298f85019e08849ff">
+
+		<script src="framer/coffee-script.js"></script>
+		<script src="framer/framer.js?nocache=de1b3b046cd7a44d11f275a7634f9e0b"></script>
+		<script src="framer/framer.generated.js?nocache=51e32a4c8b32146407fe432e1534b12e"></script>
+		<script src="framer/framer.modules.js?nocache=54b200af5cb7d9bf866d871e3eabf000"></script>
+		<script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 136;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};window.__framerAnimation = function (th,a){if (a.isNoop === true) {return a;};var l = a.layer;if (l == null) { return a; };if (l.__framerAnimationInfo == null) {l.__framerAnimationInfo = {};};l.__framerAnimationInfo[th] = {originalState:a._originalState, destinationProperties: a.properties, destinationOptions: a.options};return a;};(function() {
+  var BoerSpring, KrennSpring, alignSisterLayer, btmBarHeight, cameraView, createScrollView, fullScrolls, gutter, i, ic_camera, ic_cameraRoll, ic_cameraSwap, ic_feed, ic_profile, ic_settings, ic_takePhoto, icon, j, jrdSpring, koenSpring, len, loadingScreen, logo, mainContent, mainNav, mainNavIcons, mainView, makeDraggable, mdCurve, mdCurveIn, mdCurveOut, miniScrolls, ortCurve, profileContent, profileInfo, profileView, toggleAllBottomBars, toggleItemOpacity, toggleLike, transitionToOtherScroll, watermark;
+
+  mdCurve = "cubic-bezier(0.4, 0.0, 0.2, 1)";
+
+  mdCurveIn = "cubic-bezier(0.0, 0.0, 0.2, 1)";
+
+  mdCurveOut = "cubic-bezier(0.4, 0.0, 1, 1)";
+
+  ortCurve = "cubic-bezier(0.26, 0.86, 0.44, 0.985)";
+
+  koenSpring = "spring(200, 20, 0)";
+
+  BoerSpring = "spring(400, 30, 0)";
+
+  KrennSpring = "spring(300,25,0)";
+
+  mainContent = [
+    {
+      img: "01",
+      name: "Shintaro Nagamine",
+      celeb: "Jimi Hendrix"
+    }, {
+      img: "02",
+      name: "Amber Mitchell",
+      celeb: "Twiggy"
+    }, {
+      img: "03",
+      name: "Kayhan Golkar",
+      celeb: "Bill Murray"
+    }, {
+      img: "04",
+      name: "Advertisement",
+      celeb: "Levi's"
+    }, {
+      img: "05",
+      name: "Daniel Norman",
+      celeb: "Jean Michel Basquiat"
+    }, {
+      img: "06",
+      name: "Paige Russell",
+      celeb: "Feist"
+    }, {
+      img: "07",
+      name: "Loli at Wilhelmina",
+      celeb: "Boy George"
+    }, {
+      img: "08",
+      name: "Shotaro Kobayashi",
+      celeb: "David Lynch"
+    }, {
+      img: "09",
+      name: "Advertisement",
+      celeb: "Apple"
+    }, {
+      img: "10",
+      name: "Valentina Oleinkova",
+      celeb: "David Bowie"
+    }, {
+      img: "11",
+      name: "Yurie Ishitsuka",
+      celeb: "Madonna"
+    }
+  ];
+
+  profileContent = [
+    {
+      img: "01",
+      name: "You",
+      celeb: "Jimi Hendrix"
+    }
+  ];
+
+  jrdSpring = "spring(500, 50, 20)";
+
+  gutter = 8;
+
+  btmBarHeight = 96 * 2;
+
+  miniScrolls = [];
+
+  fullScrolls = [];
+
+  makeDraggable = function(layer) {
+    layer.draggable.enabled = true;
+    layer.draggable.horizontal = false;
+    layer.draggable.directionLock = true;
+    return layer.draggable.constraints = {
+      y: 0
+    };
+  };
+
+  toggleLike = function(layer) {
+    var pinkLayer;
+    pinkLayer = layer.children[0];
+    if (pinkLayer.states.current === "default") {
+      return pinkLayer.states["switch"]("liked", {
+        curve: "spring(500,30,30)"
+      });
+    } else {
+      return pinkLayer.states["switch"]("default", {
+        curve: "ease",
+        time: .1
+      });
+    }
+  };
+
+  toggleAllBottomBars = function(scroller, stateName) {
+    var item, j, len, ref, results;
+    ref = scroller.content.children;
+    results = [];
+    for (j = 0, len = ref.length; j < len; j++) {
+      item = ref[j];
+      results.push(item.subLayersByName("btmBar")[0].states["switch"](stateName, {
+        curve: ortCurve,
+        time: .15
+      }));
+    }
+    return results;
+  };
+
+  toggleItemOpacity = function(scroller, opacity) {
+    var item, j, len, ref, results;
+    ref = scroller.content.children;
+    results = [];
+    for (j = 0, len = ref.length; j < len; j++) {
+      item = ref[j];
+      if (item.draggable.isDragging === false) {
+        results.push(item.opacity = opacity);
+      } else {
+        results.push(void 0);
+      }
+    }
+    return results;
+  };
+
+  createScrollView = function(view, content) {
+    var bottomBar, celebText, fullLayer, fullScroll, i, ic_heart, ic_heart_pink, item, j, k, l, len, len1, miniLayer, miniScroll, personText, ref, ref1, ref2;
+    miniScroll = window.__framerNew("miniScroll", "79:18-94:0", "#11a3ee214",new ScrollComponent({
+      width: view.width,
+      height: view.height / 2,
+      x: Align.center,
+      midY: view.midY,
+      parent: view,
+      scrollVertical: false,
+      name: "mini",
+      clip: false,
+      originX: 0,
+      directionLock: true,
+      contentInset: {
+        left: view.width / 4,
+        right: view.width / 4
+      },
+      backgroundColor: "rgba(0,0,0,.3)"
+    }));
+    miniScroll.velocityThreshold = .0001;
+    miniScroll.content.clip = false;
+    miniScroll.content.draggable.directionLockThreshold = {
+      x: 0,
+      y: 20
+    };
+    miniScrolls.push(miniScroll);
+    fullScroll = window.__framerNew("fullScroll", "102:18-114:0", "#13b10c5fc",new PageComponent({
+      width: view.width,
+      height: view.height,
+      x: Align.center,
+      midY: view.midY,
+      parent: view,
+      scrollVertical: false,
+      speedY: 0,
+      name: "full",
+      directionLock: true,
+      backgroundColor: "rgba(0,0,0,.3)",
+      opacity: 0
+    }));
+    fullScroll.content.draggable.directionLockThreshold = {
+      x: 20,
+      y: 0
+    };
+    fullScrolls.push(fullScroll);
+    for (i = j = 0, ref = content.length; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {
+      miniLayer = window.__framerNew("miniLayer", "120:18-128:1", "#a9e8bd20",new Layer({
+        parent: miniScroll.content,
+        width: miniScroll.width / 2,
+        height: miniScroll.height,
+        custom: i,
+        image: "images/" + content[i].img + ".png",
+        x: gutter + ((view.width / 2) + gutter) * i
+      }));
+      makeDraggable(miniLayer);
+      fullLayer = window.__framerNew("fullLayer", "131:18-138:1", "#a60e5900",new Layer({
+        parent: fullScroll.content,
+        width: fullScroll.width,
+        custom: i,
+        height: fullScroll.height,
+        image: "images/" + content[i].img + ".png",
+        x: gutter + (view.width + gutter) * i
+      }));
+      makeDraggable(fullLayer);
+      bottomBar = window.__framerNew("bottomBar", "141:18-150:1", "#13a52c801",new Layer({
+        width: fullLayer.width,
+        parent: fullLayer,
+        height: 72 * 2,
+        y: Align.bottom,
+        opacity: 0,
+        name: "btmBar",
+        style: {
+          "background": "-webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)"
+        }
+      }));
+      bottomBar.states.add({
+        shown: {
+          opacity: 1
+        }
+      });
+      ic_heart = window.__framerNew("ic_heart", "155:17-161:1", "#16e0dd2fd",new Layer({
+        size: 96,
+        image: "images/ic_heart_white.png",
+        parent: bottomBar,
+        x: Align.right(-36),
+        y: Align.center
+      }));
+      ic_heart_pink = window.__framerNew("ic_heart_pink", "161:22-166:1", "#1643bf19c",new Layer({
+        size: 96,
+        image: "images/ic_heart_pink.png",
+        parent: ic_heart,
+        scale: 0
+      }));
+      ic_heart_pink.states.add({
+        liked: {
+          scale: 1
+        }
+      });
+      personText = window.__framerNew("personText", "168:19-177:1", "#13a11f79d",new Layer({
+        parent: bottomBar,
+        x: 32,
+        y: 32,
+        width: bottomBar.width - 32 - ic_heart.width - 32,
+        height: 28,
+        backgroundColor: "",
+        style: {
+          "font": "600 28px/28px Roboto"
+        },
+        html: content[i].name + ' <span style="font-weight: normal; opacity: .5">as</span>'
+      }));
+      if (content[i].name === "Advertisement") {
+        personText.html = content[i].name;
+        ic_heart.opacity = 0;
+      }
+      celebText = window.__framerNew("celebText", "180:18-189:1", "#123835726",new Layer({
+        parent: bottomBar,
+        x: 32,
+        width: personText.width,
+        backgroundColor: "",
+        y: personText.maxY + 16,
+        height: 28,
+        style: {
+          "font": "400 28px/28px Roboto"
+        },
+        html: content[i].celeb
+      }));
+      ic_heart.on(Events.Click, function(event, layer) {
+        return toggleLike(layer);
+      });
+    }
+    ref1 = miniScroll.content.children;
+    for (k = 0, len = ref1.length; k < len; k++) {
+      item = ref1[k];
+      item.on(Events.Click, (function(_this) {
+        return function(event, layer) {
+          mainNav.states["switch"]("hidden");
+          transitionToOtherScroll(view, layer, "full");
+          fullScroll.content.backgroundColor = "rgba(0,0,0,1)";
+          layer.scale = 1;
+          return layer.opacity = 0;
+        };
+      })(this));
+      item.on(Events.DragMove, (function(_this) {
+        return function(event, layer) {
+          layer.bringToFront();
+          return layer.scale = Utils.modulate(layer.y, [0, -miniScroll.y], [1, 1.5], true);
+        };
+      })(this));
+      item.on(Events.DragEnd, (function(_this) {
+        return function(event, layer) {
+          if (layer.scale >= 1.2) {
+            mainNav.states["switch"]("hidden");
+            transitionToOtherScroll(view, layer, "full");
+            fullScroll.content.backgroundColor = "rgba(0,0,0,1)";
+            layer.scale = 1;
+            layer.opacity = 0;
+          } else {
+            layer.animate({
+              properties: {
+                scale: 1
+              }
+            });
+          }
+          return miniScroll.scrollToLayer(layer);
+        };
+      })(this));
+    }
+    ref2 = fullScroll.content.children;
+    for (l = 0, len1 = ref2.length; l < len1; l++) {
+      item = ref2[l];
+      item.on(Events.DragStart, function(event, layer) {
+        var len2, m, mini, ref3;
+        miniScroll.scrollToLayer(miniScroll.content.children[this.custom], 0, 0, false);
+        ref3 = miniScroll.content.children;
+        for (m = 0, len2 = ref3.length; m < len2; m++) {
+          mini = ref3[m];
+          mini.opacity = 1;
+        }
+        miniScroll.content.children[this.custom].opacity = 0;
+        toggleAllBottomBars(fullScroll, "default");
+        return toggleItemOpacity(fullScroll, 0);
+      });
+      item.on(Events.DragMove, function(event) {
+        var opacityLevel;
+        opacityLevel = Utils.modulate(this.y, [0, view.height / 2], [.8, .3], true);
+        this.bringToFront();
+        this.scale = Utils.modulate(this.y, [0, view.height / 2], [1, .5], true);
+        return this.parent.backgroundColor = "rgba(0,0,0," + opacityLevel + ")";
+      });
+      item.on(Events.DragEnd, function(event) {
+        var len2, m, ref3, results;
+        if (this.y >= 100) {
+          mainNav.states["switch"]("default");
+          this.parent.animate({
+            properties: {
+              backgroundColor: "rgba(0,0,0,0)"
+            }
+          });
+          transitionToOtherScroll(view, this, "mini");
+          this.scale = 1;
+          return this.opacity = 0;
+        } else {
+          this.animate({
+            properties: {
+              scale: 1
+            }
+          });
+          toggleAllBottomBars(fullScroll, "shown");
+          ref3 = view.subLayersByName("full")[0].content.children;
+          results = [];
+          for (m = 0, len2 = ref3.length; m < len2; m++) {
+            item = ref3[m];
+            results.push(item.opacity = 1);
+          }
+          return results;
+        }
+      });
+    }
+    fullScroll.sendToBack();
+    miniScroll.updateContent();
+    fullScroll.updateContent();
+    if (view === mainView) {
+      fullScroll.opacity = 1;
+      fullScroll.bringToFront();
+      return toggleAllBottomBars(fullScroll, "shown");
+    }
+  };
+
+  alignSisterLayer = function(index, toScroll) {
+    var sisterLayer;
+    sisterLayer = toScroll.content.children[index];
+    return toScroll.scrollToLayer(sisterLayer, 0, 0, false);
+  };
+
+  transitionToOtherScroll = function(view, layer, scrollView) {
+    var ringer, toScrollView;
+    toScrollView = view.subLayersByName(scrollView)[0];
+    ringer = window.__framerNew("ringer", "306:10-306:21", "?",layer.copy());
+    ringer.x = layer.screenFrame.x;
+    ringer.y = layer.screenFrame.y;
+    ringer.name = "ringer";
+    ringer.originX = 0;
+    ringer.originY = 0;
+    if (scrollView === "full") {
+      ringer.animate({
+        properties: {
+          scale: 2,
+          x: 0,
+          y: 0
+        },
+        curve: KrennSpring
+      });
+    } else if (scrollView === "mini") {
+      ringer.animate({
+        properties: {
+          scale: .5,
+          x: toScrollView.content.children[layer.custom].screenFrame.x,
+          y: toScrollView.content.children[layer.custom].screenFrame.y
+        },
+        curve: KrennSpring
+      });
+      view.subLayersByName("full")[0].animate({
+        properties: {
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      });
+    }
+    return ringer.on(Events.AnimationEnd, (function(_this) {
+      return function() {
+        if (scrollView === "mini") {
+          layer.parent.parent.opacity = 0;
+          toScrollView.content.children[layer.custom].opacity = 1;
+          layer.opacity = 1;
+        }
+        layer.y = 0;
+        layer.scale = 1;
+        if (scrollView === "full") {
+          alignSisterLayer(layer.custom, toScrollView);
+          toggleAllBottomBars(toScrollView, "shown");
+        }
+        toScrollView.bringToFront();
+        toScrollView.opacity = 1;
+        toggleItemOpacity(toScrollView, 1);
+        return ringer.destroy();
+      };
+    })(this));
+  };
+
+  loadingScreen = window.__framerNew("loadingScreen", "357:20-359:17", "#127b54311",new Layer({
+    backgroundColor: "white",
+    size: Screen.size
+  }));
+
+  logo = window.__framerNew("logo", "360:11-365:19", "#e32ab6db",new Layer({
+    width: 364,
+    height: 116,
+    image: "images/logo.png",
+    parent: loadingScreen,
+    ignoreEvents: false
+  }));
+
+  logo.center();
+
+  mainView = window.__framerNew("mainView", "368:15-368:66", "#16eb00457",new BackgroundLayer({
+    backgroundColor: "black",
+    clip: true
+  }));
+
+  createScrollView(mainView, mainContent);
+
+  mainView.states.add({
+    profile: {
+      x: -Screen.width,
+      y: 0
+    }
+  });
+
+  watermark = window.__framerNew("watermark", "372:16-378:5", "#14777f51f",new Layer({
+    width: 150,
+    height: 46,
+    image: "images/watermark.png",
+    parent: mainView,
+    x: Align.center,
+    y: 36
+  }));
+
+  watermark.sendToBack();
+
+  profileView = window.__framerNew("profileView", "382:18-382:69", "#1281c1ba2",new BackgroundLayer({
+    backgroundColor: "black",
+    clip: true
+  }));
+
+  profileView.x = Screen.width;
+
+  createScrollView(profileView, profileContent);
+
+  profileView.states.add({
+    profile: {
+      x: 0
+    }
+  });
+
+  ic_settings = window.__framerNew("ic_settings", "387:18-394:0", "#e33e737d",new Layer({
+    size: 96,
+    image: "images/ic_settings.png",
+    parent: profileView,
+    x: Align.right(-36),
+    y: 36
+  }));
+
+  profileInfo = window.__framerNew("profileInfo", "395:18-402:0", "#a7c088c0",new Layer({
+    width: 370,
+    height: 84,
+    image: "images/profileInfo.png",
+    parent: profileView,
+    x: 36,
+    y: 36
+  }));
+
+  cameraView = window.__framerNew("cameraView", "403:17-403:56", "#e2152a17",new BackgroundLayer({
+    backgroundColor: "black"
+  }));
+
+  ic_cameraRoll = window.__framerNew("ic_cameraRoll", "416:20-421:5", "#1630bcb4d",new Layer({
+    size: 96,
+    image: "images/ic_cameraRoll.png",
+    parent: cameraView,
+    y: Align.bottom(-24),
+    x: 36
+  }));
+
+  ic_takePhoto = window.__framerNew("ic_takePhoto", "422:19-428:15", "#1569581bc",new Layer({
+    width: 144,
+    height: 144,
+    image: "images/ic_takePhoto.png",
+    parent: cameraView,
+    y: Align.bottom(-12),
+    x: Align.center
+  }));
+
+  ic_cameraSwap = window.__framerNew("ic_cameraSwap", "429:20-434:18", "#12ef3c0eb",new Layer({
+    size: 96,
+    y: Align.bottom(-24),
+    image: "images/ic_cameraSwap.png",
+    parent: cameraView,
+    x: Align.right(-36)
+  }));
+
+  cameraView.on(Events.Click, function() {
+    mainView.x = 0;
+    profileView.x = Screen.height;
+    ic_feed.states.switchInstant("active");
+    ic_camera.states.switchInstant("default");
+    mainView.states["switch"]("default");
+    profileView.states["switch"]("default");
+    return mainNav.states["switch"]("default");
+  });
+
+  mainNav = window.__framerNew("mainNav", "447:14-452:4", "#863dca94",new Layer({
+    width: mainView.width,
+    height: 96 + 36,
+    backgroundColor: "",
+    y: Align.bottom,
+    z: 1
+  }));
+
+  mainNav.bringToFront();
+
+  ic_feed = window.__framerNew("ic_feed", "454:14-456:27", "#e2deb2f8",new Layer({
+    size: 96,
+    image: "images/ic_feed.png"
+  }));
+
+  ic_camera = window.__framerNew("ic_camera", "457:16-459:29", "#11a9e6897",new Layer({
+    size: 96,
+    image: "images/ic_camera.png"
+  }));
+
+  ic_profile = window.__framerNew("ic_profile", "460:17-463:0", "#d7c8b500",new Layer({
+    size: 96,
+    image: "images/ic_profile.png"
+  }));
+
+  mainNavIcons = [ic_feed, ic_camera, ic_profile];
+
+  for (i = j = 0, len = mainNavIcons.length; j < len; i = ++j) {
+    icon = mainNavIcons[i];
+    icon.parent = mainNav;
+    icon.y = Align.center;
+    icon.opacity = .5;
+    if (i === 0) {
+      icon.x = 36;
+    } else if (i === 1) {
+      icon.x = Align.center;
+    } else if (i === 2) {
+      icon.x = Align.right(-36);
+    }
+    icon.states.add({
+      active: {
+        opacity: 1
+      }
+    });
+    if (i === 0) {
+      icon.states.switchInstant("active");
+    }
+    icon.on(Events.Click, function() {
+      var item, k, len1;
+      if (this.states.current !== "active") {
+        this.states.switchInstant("active");
+        for (k = 0, len1 = mainNavIcons.length; k < len1; k++) {
+          item = mainNavIcons[k];
+          if (item !== this) {
+            item.states.switchInstant("default");
+          }
+        }
+        if (this === ic_feed) {
+          mainView.states["switch"]("default");
+          return profileView.states["switch"]("default");
+        } else if (this === ic_camera) {
+          window.__framerAnimation("#9bcaed57",mainView.animate({
+            properties: {
+              y: -Screen.height
+            }
+          }));
+          window.__framerAnimation("#d0b12898",profileView.animate({
+            properties: {
+              y: -Screen.height
+            }
+          }));
+          return mainNav.states["switch"]("camera");
+        } else if (this === ic_profile) {
+          mainView.states["switch"]("profile");
+          return profileView.states["switch"]("profile");
+        }
+      }
+    });
+  }
+
+  mainNav.states.add({
+    hidden: {
+      y: Screen.height,
+      opacity: 0
+    },
+    camera: {
+      y: 0 - 96 - 36
+    }
+  });
+
+  Framer.Defaults.Animation = {
+    curve: jrdSpring
+  };
+
+  mainView.bringToFront();
+
+  mainNav.bringToFront();
+
+  mainNav.states.switchInstant("hidden");
+
+  loadingScreen.bringToFront();
+
+  if (Utils.isFramerStudio()) {
+    loadingScreen.sendToBack();
+    loadingScreen.destroy();
+  } else {
+    Utils.domComplete(function() {
+      return Utils.delay(1.8, function() {
+        window.__framerAnimation("#8dbf45ff",loadingScreen.animate({
+          properties: {
+            opacity: 0
+          },
+          time: .35,
+          curve: "linear"
+        }));
+        return loadingScreen.on(Events.AnimationEnd, function() {
+          loadingScreen.sendToBack();
+          return loadingScreen.destroy();
+        });
+      });
+    });
+  }
+
+  Utils.insertCSS("@import url('//fonts.googleapis.com/css?family=Roboto:200,400,500,700,300,100');");
+
+}).call(this);
+})</script>
+
+	</head>
+	<body>
+	</body>
+</html>

@@ -11,10 +11,10 @@ section#works.section
 		for work, slug in public.work._data
 			if !work.coming_soon 
 				article.article.one-half.column
-					a(style="background-color: #{work.bg};" class="thumbnail-wrapper thumbnail-#{ slug }" href="/work/#{ slug }")
-						img(class="thumbnail" src="/images/thumbnails/#{ slug }.png")
+					a(style="background-color: #{work.bg};" class="thumbnail-wrapper thumbnail-#{ slug }" href="work/#{ slug }")
+						img(class="thumbnail" src="images/thumbnails/#{ slug }.png")
 						//- img(class="logo" src="/images/thumbnails/#{ slug }_logo.png")
-					h3: a(href="/work/#{ slug }")= work.title
+					h3: a(href="work/#{ slug }")= work.title
 					p= work.tagline
 					//- p.roles= work.roles
 section#music.pd-b-xl
