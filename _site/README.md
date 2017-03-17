@@ -5,5 +5,5 @@
 - [ ] Finish Google Apps OnePick prototype video
 - [ ] Favicon
 - [ ] Reduce size of big Google Apps bg spread.
-- [ ] Fix links to Dribbble and Youtube
+- [x] Fix links to Dribbble and Youtube
 - [ ] Get photo of me!
