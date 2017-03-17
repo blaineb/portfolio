@@ -393,7 +393,8 @@ a:hover {
 // Google Apps
 ////////////////////////////////////////////////////////////////////////////////
 #apps-design-system {
-  background: url(images/google-apps/wireframes-isometric-2.png) left bottom no-repeat;
+  background-position: left bottom;
+  background-repeat: no-repeat;
   background-size: cover;
   background-color: #80CBC4;
   color: white; 
