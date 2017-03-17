@@ -262,9 +262,10 @@ a:hover {
 .logo-column img { max-width: 256px; }
 
 @media (max-width: 769px) {
+  .work-hero { text-align: center; }
   #work-header { padding: 48px 0 100px;}
-  .logo-column { padding-bottom: 48px;}
-  .logo-column img { width: 256px; max-width: 100%; }
+  .logo-column { padding-bottom: 48px; }
+  .logo-column img { width: 180px; max-width: 100%; }
   #work-header .row { flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 }
 
@@ -352,10 +353,24 @@ a:hover {
 ////////////////////////////////////////////////////////////////////////////////
 // Inbox
 ////////////////////////////////////////////////////////////////////////////////
+#inbox-logo-video-column {
+  position: relative;
+}
+#inbox-video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-30%) translateX(-30%);
+  width: 600px;
+  height: 600px;
+  max-width: none;
+  display: none;
+}
+@media (min-width: 769px) {
+  #inbox-video { display: block; }
+}
 #inbox-speed-dial { background-color: #f9f9f9; }
 .macbook-mockup  { padding-bottom: 40px; }
-
-
 
 .chips { display: flex; justify-content: space-between; flex-wrap: wrap; }
 .chip { width: 136px; height: 93px; }

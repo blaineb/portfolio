@@ -1,15 +1,24 @@
-section#inbox-hero-intro.work-hero.section
-  .row.centered
+section#inbox-work-header.work-hero.section
+  .row.align-items-center.reverse
+    #inbox-logo-video-column.four.columns.logo-column.m-r-one-column.m-l-two-columns
+        img(src="images/#{logoImage}")
+        video(id="inbox-video" width="600" height="600" preload="auto" autoplay)
+          source(src="images/inbox/inbox-logo-video.mp4" type="video/mp4")
     .five.columns.text-column
       h1: != title
       h4: != tagline
       div.my-role
         p: != roles
-    .seven.columns.video-column
-      .image-wrapper
-        //- img(src="/images/inbox/inbox-logo.png" class="mobile-only")
-        video(id="inboxVideo" width="600" height="600" preload="auto" autoplay)
-          source(src="images/inbox/inbox-logo-video.mp4" type="video/mp4")
+    //- .five.columns.text-column
+    //-   h1: != title
+    //-   h4: != tagline
+    //-   div.my-role
+    //-     p: != roles
+    //- .seven.columns.video-column
+    //-   .image-wrapper
+    //-     //- img(src="/images/inbox/inbox-logo.png" class="mobile-only")
+    //-     video(id="inboxVideo" width="600" height="600" preload="auto" autoplay)
+    //-       source(src="images/inbox/inbox-logo-video.mp4" type="video/mp4")
 //- section#work-background
 //-   .row
 //-     .five.columns

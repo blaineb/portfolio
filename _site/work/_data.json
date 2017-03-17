@@ -13,7 +13,8 @@
      "tagline" : "The inbox that goes beyond email",
      "roles" : "Interaction design, conceptual design",
      "bg" : "#3FCFB1",
-     "coming_soon" : false
+     "coming_soon" : false,
+     "logoImage" : "inbox/inbox-logo.png"
    },
     "google-apps": {
      "title": "G Suite",
