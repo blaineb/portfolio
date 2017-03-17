@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	$(".sticky").stick_in_parent();
-  console.log("ready");
+	// $(".sticky").stick_in_parent();
+  // console.log("ready");
   $('.swatch').each(function(){
     var color = $(this).attr('data-color');
     $(this).css('background-color', color);
