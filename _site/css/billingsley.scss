@@ -1,13 +1,36 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Basics
 ////////////////////////////////////////////////////////////////////////////////
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('fonts/Graphik-Regular-Web.eot');
+  src: url('fonts/Graphik-Regular-Web.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Graphik-Regular-Web.woff2') format('woff2'),
+      url('fonts/Graphik-Regular-Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('fonts/Graphik-Medium-Web.eot');
+  src: url('fonts/Graphik-Medium-Web.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Graphik-Medium-Web.woff2') format('woff2'),
+       url('fonts/Graphik-Medium-Web.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+
 html { font-size: 62.5%; } /* 1.0rem = 15px  */
 body {
 	-webkit-font-smoothing: antialiased;
 	font-size: 1.4em;
 	line-height: 1.4;
 	font-weight: 400;
-	font-family: "Graphik", "New Century Schoolbook", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Graphik Web", "New Century Schoolbook", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #999999;
 }
 img { max-width: 100%; }
@@ -21,7 +44,7 @@ video { max-width: 100%; margin: 0 auto; display: block; }
 ////////////////////////////////////////
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Graphik", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Graphik Web", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 400;
@@ -30,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: 4.0rem; line-height: 1.2  ; letter-spacing: -.2rem  ; font-weight: 500;                     }
 h2 { font-size: 2.8rem; line-height: 1.25 ; letter-spacing: -.15rem ; margin-bottom: 24px;                  }
-h3 { font-size: 1.8rem; line-height: 1    ; letter-spacing: 0       ; font-weight: 500; padding-bottom: 8px;}
+h3 { font-size: 1.8rem; line-height: 1    ; letter-spacing: -.05rem ; font-weight: 500; padding-bottom: 8px;}
 h4 { font-size: 1.6rem; line-height: 1.35 ; letter-spacing: 0       ;                                       }
 h5 { font-size: 1.4rem; line-height: 1.5  ; letter-spacing: -.05rem ;                                       }
 h6 { font-size: 1.2rem; line-height: 1.6  ; letter-spacing: 0       ; color: #bbbbbb;                       }
@@ -101,6 +124,11 @@ a:hover {
 // .columns { margin-bottom: 16%; }
 
 // .column:last-child, .columns:last-child { margin-bottom: 0; }
+
+@media (max-width: 769px) {
+  .column + .column, .columns + .columns,
+  .column + .columns, .columns + .column { padding-top: 80px;  }
+}
  @media (min-width: 769px) {
 
   .row {
@@ -175,6 +203,8 @@ a:hover {
 ////////////////////////////////////////
 // Work articles on the homepage
 ////////////////////////////////////////
+#works { padding-bottom: 48px; }
+
 .article { margin-bottom: 16%; }
 .article img { border-radius: 2px; }
 .article h3 { padding-top: 40px; }
@@ -212,9 +242,11 @@ a:hover {
 .image-links { 
   position: relative;
   display: block;
+
   transition: opacity .3s cubic-bezier(0.26, 0.86, 0.44, 0.985);
   margin-bottom: 16%;
 }
+.image-links.column { padding-top: 0; }
 .image-links img { border-radius: 3px; margin: 0; float: left;}
 .image-link-text { 
   position: absolute;
@@ -376,36 +408,9 @@ a:hover {
 
 .chips { display: flex; justify-content: space-between; flex-wrap: wrap; }
 .chip { width: 136px; height: 93px; }
-////////////////////////////////////////////////////////////////////////////////
-// Utilities
-////////////////////////////////////////////////////////////////////////////////
-
-// pd = padding, b = bottom
-.pd-b-sm { padding-bottom: 24px; }
-.pd-b-md { padding-bottom: 56px; }
-.pd-b-lg { padding-bottom: 80px; }
-.pd-b-xl { padding-bottom: 180px; }
-.pd-t-sm { padding-top: 24px; }
-.pd-t-md { padding-top: 56px; }
-.pd-t-lg { padding-top: 80px; }
 
 
-// Very annoying movie issue.  Hack to hide it.
-.white-video-scrim, .grey-video-scrim { position: relative; }
-.white-video-scrim:after, .grey-video-scrim:after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 4px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background-color: white;
-}
-.grey-video-scrim:after { background-color: #f9f9f9; }
-.white-video-scrim:after, .grey-video-scrim:after {
-  bottom: -1px!important;
-}
+
 ////////////////////////////////////////////////////////////////////////////////
 // Google Apps
 ////////////////////////////////////////////////////////////////////////////////
@@ -423,6 +428,8 @@ a:hover {
 @media (min-width: 550px)  {
   #apps-design-system .columns { position: relative; top: -80px; }
 }
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // Framer
@@ -452,6 +459,7 @@ a:hover {
 @media (max-width: 550px)  {
   #disclaimer .centered { text-align: left; }
 }
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -513,3 +521,36 @@ a:hover {
 
 
 
+////////////////////////////////////////////////////////////////////////////////
+// Utilities
+////////////////////////////////////////////////////////////////////////////////
+
+// pd = padding, b = bottom
+.pd-b-sm { padding-bottom: 24px; }
+.pd-b-md { padding-bottom: 56px; }
+.pd-b-lg { padding-bottom: 80px; }
+.pd-b-xl { padding-bottom: 180px; }
+.pd-t-sm { padding-top: 24px; }
+.pd-t-md { padding-top: 56px; }
+.pd-t-lg { padding-top: 80px; }
+
+
+// Very annoying movie issue.  Hack to hide it.
+.white-video-scrim, .grey-video-scrim { position: relative; }
+.white-video-scrim:after, .grey-video-scrim:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: white;
+}
+.grey-video-scrim:after { background-color: #f9f9f9; }
+.white-video-scrim:after, .grey-video-scrim:after {
+  bottom: -1px!important;
+}
+
+#article-header { padding: 180px 0; background-color: #f9f9f9; }
+.article-section { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
