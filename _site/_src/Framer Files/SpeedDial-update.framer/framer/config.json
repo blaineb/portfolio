@@ -1,0 +1,20 @@
+{
+  "orientation" : 0,
+  "updateDelay" : 0.3,
+  "delay" : 0.3,
+  "contentScale" : 1,
+  "fullScreen" : false,
+  "sharedPrototype" : 0,
+  "propertyPanelToggleStates" : {
+
+  },
+  "deviceType" : "apple-iphone-6s-silver",
+  "projectId" : "F67E1FD6-3F91-48A3-A824-72CBA5077745",
+  "deviceOrientation" : 0,
+  "selectedHand" : "",
+  "device" : "iPhone 5S Space Gray",
+  "foldedCodeRanges" : [
+
+  ],
+  "deviceScale" : "fit"
+}

@@ -1,0 +1,52 @@
+app.coffee
+framer/backups/backup-2017-03-16 11.06.42.coffee
+framer/backups/backup-2017-03-16 11.07.42.coffee
+framer/backups/backup-2017-03-16 11.08.42.coffee
+framer/backups/backup-2017-03-16 11.09.42.coffee
+framer/backups/backup-2017-03-16 11.10.42.coffee
+framer/coffee-script.js
+framer/config.json
+framer/framer.generated.js
+framer/framer.init.js
+framer/framer.js
+framer/framer.js.map
+framer/framer.modules.js
+framer/images/cursor-active.png
+framer/images/cursor-active@2x.png
+framer/images/cursor.png
+framer/images/cursor@2x.png
+framer/images/icon-120.png
+framer/images/icon-152.png
+framer/images/icon-180.png
+framer/images/icon-192.png
+framer/images/icon-76.png
+framer/manifest.txt
+framer/preview.png
+framer/style.css
+framer/version
+images/01.png
+images/02.png
+images/03.png
+images/04.png
+images/05.png
+images/06.png
+images/07.png
+images/08.png
+images/09.png
+images/10.png
+images/11.png
+images/ic_camera.png
+images/ic_cameraRoll.png
+images/ic_cameraSwap.png
+images/ic_feed.png
+images/ic_heart_pink.png
+images/ic_heart_white.png
+images/ic_profile.png
+images/ic_settings.png
+images/ic_takePhoto.png
+images/logo.png
+images/profileInfo.png
+images/stefanie_mute.mov
+images/watermark.png
+index.html
+modules/myModule.coffee
