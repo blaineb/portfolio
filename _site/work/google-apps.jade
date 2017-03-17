@@ -15,7 +15,10 @@ section#apps-intro.section
 //-       img.chip(src="/images/google-apps/apps_chip_calendar.png")
 //-       img.chip(src="/images/google-apps/apps_chip_directions.png")
 //-       img.chip(src="/images/google-apps/apps_chip_youtube.png")
-section#apps-design-system.section(style="background-image: url(#{environment}images/google-apps/wireframes-isometric-2.png);")
+- var baseURL = "/portfolio/"
+if environment == "development"
+  - baseURL = "/"
+section#apps-design-system.section(style="background-image: url(#{baseURL}images/google-apps/wireframes-isometric-2.png);")
   .row(style="min-height:600px;")
     .six.columns
       h2.image-bg-header The system needed to be flexible enough to work in Docs, YouTube, Sites, Inbox &amp; Gmail.
