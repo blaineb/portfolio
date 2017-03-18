@@ -1,6 +1,13 @@
 ################################################################################
 # Content
 ################################################################################
+Framer.Device.customize
+	deviceType: Framer.Device.Type.Phone
+	screenWidth: 750
+	screenHeight: 1334
+	deviceImage: "images/iphone-white.png"
+	deviceImageWidth: 990
+	deviceImageHeight: 1982
 
 speedDialContent = [
 	{ label: "Compose", image: "images/ic_add_white_2x_web_24dp.png", otherimage: "images/ic_mode_edit_white_2x_web_24dp.png" },
@@ -9,7 +16,7 @@ speedDialContent = [
 	{ label: "Roy Shin", image: "images/roy-big.png" },
 	{ label: "Gill Ward", image: "images/gill-big.png" },
 ]
-
+Canvas.backgroundColor = "#f9f9f9"
 speedDials = []
 speedDialLabels = []
 
@@ -17,9 +24,12 @@ speedDialLabels = []
 ################################################################################
 # Setup and variables
 ################################################################################
-bg = new BackgroundLayer backgroundColor: "#ececec"     #The stage
+bg = new Layer 
+	backgroundColor: "#ececec"     #The stage
+	width: Screen.width
+	height: Screen.height
 mdCurve = "cubic-bezier(0.4, 0.0, 0.2, 1)"     #Material Design Animation Curves
-Framer.Defaults.Animation = curve: mdCurve, time: .2    #Customize defaults
+Framer.Defaults.Animation = curve: mdCurve, time: .3    #Customize defaults
 
 # Specific to this prototype
 miniFabSize = 96
@@ -45,15 +55,23 @@ appBar = new Layer
 	width: bg.width
 	backgroundColor :"#4285f4"
 appBar.style.boxShadow = "0 0 8px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.2)"
-
+nav = new Layer
+	width: 1500/2
+	height: 304/2
+	parent: appBar
+	image: "images/nav.png"
 tlCard = new Layer
 	height: bg.height
 	width: bg.width
-	y: appBar.maxY + 96
+	y: appBar.maxY
 	borderRadius: 4
-	backgroundColor: 'white'
-tlCard.style.boxShadow = "0 0 2px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.15)"
-
+	backgroundColor: ''
+# tlCard.style.boxShadow = "0 0 2px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.15)"
+content = new Layer
+	width: 1500/2
+	parent: tlCard
+	height: 2098/2
+	image: "images/content.png"
 
 # SPEED DIAL BEGINS!!!
 
@@ -63,7 +81,7 @@ speedDialScrim = new Layer
 	backgroundColor: "#ececec"
 	opacity: 0
 speedDialScrim.states.add
-	shown: {opacity: .6 }
+	shown: {opacity: .8 }
 	
 	
 # Make the Speed Dial.
@@ -90,13 +108,15 @@ speedDialScrim.states.add
 			y: (bg.height - 112 - 32 - ((miniFabSize + 32) * i))
 			scale: .8
 			opacity: 0
-		
+			
+		if i > 1
+			FAB.image = speedDialContent[i].image
+			
 		FAB.states.add
 			shown: { opacity: 1, y: bg.height - 112 - 32 - ((miniFabSize + 32) * i), scale: 1 }
 		
 		# Add avatars to the non-system ones.
-		if i > 1
-			FAB.image = speedDialContent[i].image
+		
 	
 	FAB.style.boxShadow = "0 0 8px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)"
 	speedDials.push(FAB) # Add them all to an array for later.
@@ -128,7 +148,7 @@ speedDialScrim.states.add
 
 # Icons	
 ic_reminder = new Layer
-	superLayer: speedDials[1]
+	parent: speedDials[1]
 	width: 48
 	height: 48
 	image: speedDialContent[1].image
@@ -136,17 +156,18 @@ ic_reminder.center()
 
 
 ic_add = new Layer
-	x:0, y:0, width:48, height:48, image: speedDialContent[0].image, superLayer: speedDials[0]
+	x:0, y:0, width:48, height:48, image: speedDialContent[0].image, parent: speedDials[0]
 ic_add.center()
 ic_add.states.add
 	hidden: { opacity: 0, rotation: 135 }
 	
 	
 ic_create = new Layer
-	x:0, y:0, width:48, height:48, image: speedDialContent[0].otherimage, rotation: -135, opacity: 0, superLayer: speedDials[0]
+	x:0, y:0, width:48, height:48, image: speedDialContent[0].otherimage, rotation: -135, opacity: 0, parent: speedDials[0]
+ic_create.center()
 ic_create.states.add
 	shown: { opacity: 1, rotation: 0 }
-ic_create.center()	
+
 
 
 

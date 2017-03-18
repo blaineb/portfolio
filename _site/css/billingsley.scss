@@ -195,11 +195,17 @@ a:hover {
 #hi h1, #hi h4 { text-align: center; }
 #hi h1 { margin-bottom: 2rem; }
 .hero-text {
-	padding: 240px 0;
+	// padding: 240px 0;
   background-color: #f8f8f8;
 }
 
+// #hi { background: url(../images/hero-test.png) center bottom no-repeat; background-size: cover; background-color: #f9f9f9;  }
+#hi { position: relative; }
+// #hi img { max-width: 720px; display: block; z-index: 10; position: relative; position: absolute; left: 0;}
+#hi .square { display: none; width: 150px; border-radius: 4px; height: 150px; margin: 0 auto;  background-color: #6BCC90; margin-bottom: 80px }
+// #hi .hero-wrapper { position: relative; min-height: 600px;}
 
+#portrait { position: absolute; right: 48px; bottom: 0; max-width: 800px;}
 ////////////////////////////////////////
 // Work articles on the homepage
 ////////////////////////////////////////
