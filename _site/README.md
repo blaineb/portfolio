@@ -11,3 +11,5 @@
 - [ ] Get photo of me!
 - [x] Change title tag
 - [x] Add webfont
+- [x] Fix Tusitala tagline
+- [ ] Add references to Stephanie and Oliver more
