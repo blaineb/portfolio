@@ -179,7 +179,7 @@ a:hover {
   // eleven:  95.3333333333%
 }
 
-
+.row.justify-left { justify-content: start; }
 .row.centered { justify-content: center; }
 .row.reverse { flex-direction: row-reverse; }
 #music { padding-top: 0; }
@@ -406,9 +406,13 @@ a:hover {
 //   .sticky.is_stuck { position: fixed; }
 // }
 #work-notepad { overflow-x: hidden; }
-#pattern-expander-video-column { position: relative; }
+#pattern-expander-video-column, .mini-desktop-shadow { position: relative; }
 #pattern-expander-video-column .video-wrapper {
   padding: 24px 8px 12px;
+}
+
+.video-wrapper {
+  
   border-radius: 4px;
   position: relative;
   z-index: 10;
@@ -418,7 +422,8 @@ a:hover {
   // overflow-y: hidden;
 
 }
-#pattern-expander-video-column .video-wrapper .dots {
+.video-wrapper{ padding: 24px 0 0; border-radius: 4px;}
+.video-wrapper .dots {
   display: block;
   left: 0;
   right: 0;
@@ -436,7 +441,7 @@ a:hover {
 .dots .dot { height: 10px; width: 10px; border-radius: 50%; background-color: #FF6158; margin-left: 6px; box-sizing: border-box; border: 1px solid rgba(0,0,0,.1);}
 .dot:nth-child(2) { background-color: #FFBE2F; }
 .dot:nth-child(3) { background-color: #29CA41; }
- #pattern-expander-video-column:before {
+ #pattern-expander-video-column:before, .mini-desktop-shadow:before {
   content: '';
   width: 80%;
   position: absolute;
@@ -678,4 +683,20 @@ a:hover {
 .swiper-button-prev { margin-left: 16px;}
 
 .under-construction { background-color: #FAF2A1;  padding: 24px; }
-.under-construction p { color: #A39E68; }
+.under-construction p { color: #A39E682; }
+
+#academia-usability { background-color: #f9f9f9; }
+#academia-usability video { border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; }
+#academia-research { background-color: #3B6EB4; color: white; }
+#academia-research h3 { color: rgba(255,255,255,.7);}
+
+
+#around-the-web .columns { display: flex; flex-direction: column; justify-content: space-between; }
+#around-the-web h3 + p { padding-bottom: 8px; }
+
+@media (min-width: 769px)  {
+  #around-the-web h3 { min-height: 4rem;}
+  #around-the-web h3 + p { min-height: 3.2rem;  }
+}
+
+
