@@ -6,6 +6,27 @@ $(document).ready(function(){
     $(this).css('background-color', color);
     // $(this:before).css('box-shadow', 'box-shadow: 0 4px 32px rgba(0,0,0,.2), 0 4px 32px' + color + ';')
   });
+
+  //initialize swiper when document ready  
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    slidesPerView: 6,
+    centeredSlides: true,
+    spaceBetween: 32,
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    grabCursor: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 3
+      },
+      400: {
+        slidesPerView: 2
+      }
+    }
+  })    
 });
 
 
