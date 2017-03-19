@@ -18,13 +18,36 @@ section#apps-intro.section
 - var baseURL = "/"
 if environment == "development"
   - baseURL = "/" 
-section#apps-design-system.section(style="background-image: url(#{baseURL}images/google-apps/wireframes-isometric-2.png);")
+section#apps-design-system.section(style="background-image: url(#{baseURL}images/google-apps/wireframes-isometric-sm.png);")
   .row(style="min-height:600px;")
     .six.columns
       h2.image-bg-header The system needed to be flexible enough to work in Docs, YouTube, Sites, Inbox &amp; Gmail.
       p (And third-party integrations as well)
-section#multi-select.section
-  .row
+section#sharing-tray.section
+  .row.align-items-center
     .five.columns
-      h3 Don't slow down common interactions, but allow for anything
-      p I spent a lot of time refining small interactions like the multi-select interaction to be sure we never got in your way for quick selections, but didn't compromise on power user features.
+      h3 Get the most common files from multiple sources
+      p We wanted an extensible system that could pull media from any Google property as well as 3rd party sources.
+
+    .six.columns
+      video(id="tray-interaction-video" width="402" preload="auto" autoplay loop)
+        source(src="images/google-apps/sharing-tray-video.mp4" type="video/mp4")
+
+section#apps-multiselect.section
+  
+  .row.centered
+    .eight.columns
+      h2 Don't slow down common interactions, but allow for anything
+      p I spent a lot of time refining small interactions to be sure we never got in your way for quick selections, but didn't compromise on power user features.
+  .swiper-container
+    .swiper-wrapper
+      each val, index in ["Photos, articles, attachments, & more all available in one tray.  One tap selects and inserts, dismissing the tray","Swiping up or double-tapping on an item opens a fullscreen preview","Long pressing on anything activates multi-select mode","Multi-select mode shows the selection state of each item in the drawer, along with a bottom drawer collecting the selections","Tapping the small circle on a chip toggles its selection","The bottom bar is updated to reflect that.","In cases where the user dives into the full picker for a given source, this bar provides trust that the app didn't forget their prior selections.","In multiselect mode, tapping the chip opens a fullscreen preview","The preview still allows for a selection toggle, but with more context","Each entry point can define deeper views, each of different layouts.  This is an image grid view, complete with subnavigation and filtering","Search based views, like the YouTube picker, go straight to a focused search.","Drive's full file picker can be accessed","This drawer/deep picker paradigm extends to picking more than media - it works for Apps content layout tools","For common two-step actions, the drawer can handle the interaction without kicking out to a full picker.  This keeps the user in context and feels more lightweight","Various layouts can exist within the picker as well - trays, tiles, and lists can be customized per app."]
+        .swiper-slide
+          .image-wrapper
+            img(src="images/google-apps/apps-multiselect0#{index}.png")
+          .caption
+            p.caption= val
+    .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next
+

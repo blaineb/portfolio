@@ -324,6 +324,7 @@ a:hover {
   padding: 32px;
 }
 #pattern-illustrations { background-color: #f9f9f9; }
+
 #pattern-deals { overflow-x: hidden; }
 #pattern-deals .hanging-right-image img { max-height: 680px; margin-left: -86px; }
 #pattern-deals .hanging-right-image { min-height: 680px;}
@@ -369,7 +370,12 @@ a:hover {
   background-color: rgba(0,0,0,.1); 
    
   margin-top: 120%; }
+#pattern-illustrations { text-align: center; }
+#pattern-illustrations .column { padding-bottom: 48px; }
+#pattern-illustrations .column:last-child { padding-bottom: 0; }
+#pattern-illustrations img { max-width: 280px; text-align: center;}
 @media (min-width: 769px) {
+  #pattern-illustrations img { max-width: 100%; }
   #pattern-deals .hanging-right-image img { margin-left: 0; }
   .pattern-swatches { padding-top: 80px; padding-bottom: 80px;}
   .swatch:nth-child(3n+1) {  margin-left: 0; top: -40px;}
@@ -447,6 +453,7 @@ a:hover {
 ////////////////////////////////////////////////////////////////////////////////
 // Inbox
 ////////////////////////////////////////////////////////////////////////////////
+#inbox-conversations { padding-bottom: 0; }
 #inbox-logo-video-column {
   position: relative;
 }
@@ -464,6 +471,7 @@ a:hover {
   #inbox-video { display: block; }
 }
 #inbox-speed-dial { background-color: #f9f9f9; }
+#inbox-bundle-settings { background-color: #f5f5f5; }
 .macbook-mockup  { padding-bottom: 40px; }
 .macbook-mockup img { max-width: 130%; margin-left: -15%; }
 .chips { display: flex; justify-content: space-between; flex-wrap: wrap; }
@@ -596,8 +604,8 @@ a:hover {
 
 
 // Very annoying movie issue.  Hack to hide it.
-.white-video-scrim, .grey-video-scrim { position: relative; }
-.white-video-scrim:after, .grey-video-scrim:after {
+.white-video-scrim, .grey-video-scrim, .dark-grey-video-scrim:after { position: relative; }
+.white-video-scrim:after, .grey-video-scrim:after, .dark-grey-video-scrim:after {
   content: '';
   display: block;
   position: absolute;
@@ -608,9 +616,63 @@ a:hover {
   background-color: white;
 }
 .grey-video-scrim:after { background-color: #f9f9f9; }
-.white-video-scrim:after, .grey-video-scrim:after {
+.dark-grey-video-scrim:after { background-color: #f5f5f5; }
+.white-video-scrim:after, .grey-video-scrim:after, .dark-grey-video-scrim:after {
   bottom: -1px!important;
 }
 
 #article-header { padding: 180px 0; background-color: #f9f9f9; }
 .article-section { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+
+#apps-multiselect { border-top: 1px solid #ededed; }
+#apps-multiselect .image-wrapper {
+  max-width: 360px;
+  position: relative;
+}
+#apps-multiselect .swiper-slide img { 
+  margin-bottom: 48px;
+  display: block;
+  box-shadow: 0 0 2px rgba(0,0,0,.1)
+}
+#apps-multiselect .image-wrapper:before {
+  content: ' ';
+  display: block;
+  width: 80%;
+  left: 10%;
+  position: absolute;
+  bottom: 48px;
+  height: 50%;
+  z-index: -1;
+  box-shadow: 0 0 24px rgba(0,0,0,.5);
+}
+
+#apps-multiselect .swiper-wrapper { padding: 80px 0 ; }
+
+#apps-multiselect .image-wrapper:after {
+  content:'';
+  display: table-cell;
+  height: 0;
+  clear: both;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  background-image: none; 
+  width: 56px;
+  height: 56px;
+  margin-top: -28px;
+  box-shadow: 0 0 4px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.2);
+  border-radius: 50%;
+  background-color: white;
+  transition: box-shadow .2s linear;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover { box-shadow: 0 0 8px rgba(0,0,0,.2), 0 4px 8px rgba(0,0,0,.2); }
+.swiper-button-prev { background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMjAgMTFINy44M2w1LjU5LTUuNTlMMTIgNGwtOCA4IDggOCAxLjQxLTEuNDFMNy44MyAxM0gyMHYtMnoiLz48L3N2Zz4=);
+}
+.swiper-button-next {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgNGwtMS40MSAxLjQxTDE2LjE3IDExSDR2MmgxMi4xN2wtNS41OCA1LjU5TDEyIDIwbDgtOHoiLz48L3N2Zz4=);
+}
+
+.swiper-pagination-bullet { opacity: .05; width: 6px; height: 6px;}
+.swiper-pagination-bullet-active { opacity: 1; }
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev { margin-right: 16px;}
+.swiper-button-prev { margin-left: 16px;}
