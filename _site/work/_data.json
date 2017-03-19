@@ -20,25 +20,25 @@
      "title": "G Suite",
      "tagline" : "Sharing interactions for Google's apps",
      "roles" : "Interaction design",
-     "bg" : "#FFAD66",
+     "bg" : "#029AFF",
      "coming_soon" : false,
      "logoImage" : "google-apps/google-logo.png"
    },
-  "framer": {
+    "academia": {
+     "title": "Academia.edu",
+     "tagline" : "Accelerating the world's research",
+     "roles" : "User experience, research, product management",
+     "bg" : "#FFAD66",
+     "logoImage" : "academia/academia-logo.png",
+     "coming_soon" : false
+   },
+   "framer": {
      "title": "Framer.js community",
      "tagline" : "Contributions to community of Framer designers",
      "roles" : "Mentorship, examples, modules",
      "bg" : "#38CBF4",
      "coming_soon" : false,
      "logoImage" : "framer/framer-logo.png"
-   },
-    "academia": {
-     "title": "Academia.edu",
-     "tagline" : "Accelerating the world's research",
-     "roles" : "User experience, research, product management",
-     "bg" : "#0F84DE",
-     "logoImage" : "academia/academia-logo.png",
-     "coming_soon" : true
    },
    "Robin": {
      "title": "Robin",
