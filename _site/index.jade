@@ -20,7 +20,7 @@ section#works.section
 					h3: a(href="work/#{ slug }")= work.title
 					p= work.tagline
 					//- p.roles= work.roles
-section#music.pd-b-xl
+section#music.section
 	.section-header.pd-b-xl: h6 Music
 	.row
 		for music in public.music._data
@@ -29,7 +29,7 @@ section#music.pd-b-xl
 				.image-link-text
 					h3= music.title
 					p= music.tagline
-section#around-the-web.pd-b-xl
+section#around-the-web.section
 	.section-header.pd-b-xl: h6 Around the web
 	.row.justify-left
 		.four.columns
