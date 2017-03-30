@@ -32,6 +32,14 @@
      "logoImage" : "academia/academia-logo.png",
      "coming_soon" : false
    },
+   "ux-masterclass": {
+     "title": "Google UX Masterclasses",
+     "tagline" : "UX classes with startups in Africa & the Middle East",
+     "roles" : "Mentorship, examples, modules",
+     "bg" : "#38CBF4",
+     "coming_soon" : true,
+     "logoImage" : "framer/framer-logo.png"
+   },
    "framer": {
      "title": "Framer.js community",
      "tagline" : "Contributions to community of Framer designers",
