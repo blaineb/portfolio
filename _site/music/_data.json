@@ -2,17 +2,20 @@
    "special-interests": {
      "title": "The Special Interests",
      "tagline" : "Second solo guitar EP",
-     "image" : "images/music/special-interests.jpg"
+     "image" : "images/music/special-interests.jpg",
+     "url" : "//blainebillingsley.bandcamp.com/album/the-special-interests"
    },
    "sticks": {
      "title": "Sticks",
      "tagline" : "First solo guitar EP",
-     "image" : "images/music/sticks.jpg"
+     "image" : "images/music/sticks.jpg",
+     "url" : "//blainebillingsley.bandcamp.com/album/sticks"
    },
    "tusitala": {
      "title": "Tusitala",
      "tagline" : "Deconstructed Beatles covers",
-     "image" : "images/music/tusitala.jpg"
+     "image" : "images/music/tusitala.jpg",
+     "url" : "//blainebillingsley.bandcamp.com/album/it-might-not-have-been-like-this"
    }
 
 
