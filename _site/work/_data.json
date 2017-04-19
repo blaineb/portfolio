@@ -3,7 +3,7 @@
      "title": "Pattern",
      "tagline" : "The notepad for salespeople",
      "roles" : "User experience, research, visual design",
-     "bg" : "#FFE74C",
+     "bg" : "#FFCF5F",
      "coming_soon" : false,
      "logoImage" : "pattern/pattern-logo.png"
    },
@@ -12,7 +12,7 @@
      "title": "Inbox by Gmail",
      "tagline" : "The inbox that goes beyond email",
      "roles" : "Interaction design, visual design",
-     "bg" : "#3FCFB1",
+     "bg" : "#2CC1AA",
      "coming_soon" : false,
      "logoImage" : "inbox/inbox-logo.png"
    },
@@ -20,7 +20,7 @@
      "title": "G Suite",
      "tagline" : "Sharing interactions for Google's apps",
      "roles" : "Interaction design",
-     "bg" : "#029AFF",
+     "bg" : "#84C3DD",
      "coming_soon" : false,
      "logoImage" : "google-apps/google-logo.png"
    },
@@ -28,7 +28,7 @@
      "title": "Academia.edu",
      "tagline" : "Accelerating the world's research",
      "roles" : "User experience, research, product management",
-     "bg" : "#FFAD66",
+     "bg" : "#F37984",
      "logoImage" : "academia/academia-logo.png",
      "coming_soon" : false
    },
@@ -36,7 +36,7 @@
      "title": "Google UX Masterclasses",
      "tagline" : "UX classes with startups in Africa & the Middle East",
      "roles" : "Mentorship, examples, modules",
-     "bg" : "#38CBF4",
+     "bg" : "#FFCF5F",
      "coming_soon" : true,
      "logoImage" : "framer/framer-logo.png"
    },
