@@ -8,6 +8,7 @@ $(document).ready(function(){
   });
 
   //initialize swiper when document ready  
+
   var mySwiper = new Swiper ('#apps-multiselect .swiper-container', {
     // Optional parameters
     slidesPerView: 6,
@@ -26,6 +27,7 @@ $(document).ready(function(){
         slidesPerView: 2
       }
     }
+
   });
 
   var academiaSwiper = new Swiper ('#aca-search .swiper-container', {
@@ -48,6 +50,8 @@ $(document).ready(function(){
     }
   });
   academiaSwiper.slideTo(8, 0);
+
+
 });
 
 
