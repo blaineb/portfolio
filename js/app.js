@@ -8,11 +8,8 @@ $(document).ready(function(){
   });
 
   //initialize swiper when document ready  
-<<<<<<< HEAD
+
   var mySwiper = new Swiper ('#apps-multiselect .swiper-container', {
-=======
-  var mySwiper = new Swiper ('.swiper-container', {
->>>>>>> 0f0d2582bdb7762f742f3ea3c9a330f3961af081
     // Optional parameters
     slidesPerView: 6,
     centeredSlides: true,
@@ -30,7 +27,7 @@ $(document).ready(function(){
         slidesPerView: 2
       }
     }
-<<<<<<< HEAD
+
   });
 
   var academiaSwiper = new Swiper ('#aca-search .swiper-container', {
@@ -53,9 +50,8 @@ $(document).ready(function(){
     }
   });
   academiaSwiper.slideTo(8, 0);
-=======
-  })    
->>>>>>> 0f0d2582bdb7762f742f3ea3c9a330f3961af081
+
+
 });
 
 
