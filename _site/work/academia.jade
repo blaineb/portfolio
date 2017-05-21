@@ -1,23 +1,10 @@
 != partial("_header")
-section#aca-intro.section
-  .row.centered
-    .eight.columns
-      h2 Researching how to accelerate the world's research
-      p I worked with Academia to implement a user-centered product approach by testing ideas and talking to users more frequently.
-section#academia-research.section
-  .row.align-items-center
-    .five.columns
-      h3 Concept testing early &amp; often
-      p.pd-b-md We implemented a process of defining goals, writing scripts to evaluate concepts with users, and rigorously synthesizing the information afterwards.
-      p Previously all notes were shared in Slack, but then lost over time and never collated into general learnings.  We used a novel approach with Google Spreadsheets to achieve more consistency across interviews.
-    .five.columns.m-l-two-columns.framer-module-image
-        img(src="images/academia/academia-research-example.png")
 section#academia-usability.section
   .row.align-items-center.reverse
     .five.columns
       h3 Improving usability with simplicity &amp; fun
-      p.pd-b-md A redesign of the profile page had regressed a lot of beloved functionality.  
-      p They asked me to find simple, tactile ways to bring back paper sorting &amp; categorization into the page.
+      p.pd-b-md A prior redesign of the profile page had regressed a lot of beloved functionality and confused users a lot.  
+      p I designed and prototyped delightful, tactile ways to bring back paper sorting &amp; categorization the page.
     .seven.columns.mini-desktop-shadow
       .video-wrapper.mini-desktop
         .dots
@@ -26,13 +13,46 @@ section#academia-usability.section
           .dot
         video(id="academia-paper-sorting" width="622" preload="auto" autoplay loop)
           source(src="/images/academia/academia-paper-sorting-2.mp4" type="video/mp4")
+section#aca-search.section
+  .row.centered
+    .eight.columns
+      h2 Fixing search on the world's largest academic network
+      //- p Searching the world's largest online database of academic work was an essential part of selling university subscriptions, but you couldn't actually search the paper's contents online!
+      p.pd-b-md Search is about more than only the interactions. We interviewed academics to find out what makes a paper relevant to them and how they conduct research online.  I built a browser extension to test variations in the search algorithm, vastly improving relevance.
+      p.caption And I designed the interactions, too :)
+  .swiper-container
+    .swiper-wrapper
+      each val, index in ["It all starts with placeholder text! It seems the same as it was before, but it's all new under the hood.","Research found that people browse about the same topic several times, so the zero-state focuses on getting back to what you were working on.","Once you start typing, searching paper titles starts as the default.  This is over 80% of searches on academia.","The search results can index across papers, authors, universities, research interests, and job openings.","Relevance, recency, and popularity are the various search filters.","Academia will suggest to follow searches you make often to be notified of new papers on a topic.","You can do a lot more than search paper titles, however...","Adding filters from the search box makes searching a breeze.","As you add filters from the search bar, the suggestion text reads back your query in plain english.","This helps less tech-savvy users understand how filters work.","It can handle complex filter queries...","...Like multiple fields...","...Field and author...","...university...","And while incredibly uncommon, extreme power usage works great.","The second most common search is for people specifically.","When updating search to include paper searches, we didn't want to lose the ability to quickly get to a profile page","So selecting a username first sends you straight to the profile page.","Voila! Who knew Carl Perkins ","For browsers or people exploring large search results, filters can be added on the search results page.","Updating the filters updates the query as well, teaching users how search suggestions can work.","We did lots of research to find which filters were the most important, and which filters librarians and academics rely on the most.","Here's an example of the most complex edge case, for filters."]
+        .swiper-slide
+          .mini-desktop.mini-desktop-shadow
+            .dots
+              .dot
+              .dot
+              .dot
+            .image-wrapper
+              img(src="images/academia/aca-search/#{index}.png")
+          .caption
+            p.caption= val
+    .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next
 section#academia-messages.section
   .row.centered.pd-b-md
     .eight.columns
-      h3 A social network for academics needed a place to facilitate conversations
+      h3 An academic network needs a way to facilitate communication
       p.pd-b-md We overhauled the messages section of the product to facilitate easier conversations and better triaging for those who received tons of messages.
       p.caption I created the specs and interactions and worked with <a href="//www.dribbble.com/max-schwartz" target="_blank">Max Schwartz</a> on the final visual designs.
   .row
     .twelve.columns.macbook-mockup
       img(src="images/academia/academia-messages.png")
+section#academia-research.section
+  .row.align-items-center
+    .five.columns
+      h3 User-centered process
+      p.pd-b-md We implemented a process of defining goals, writing scripts to evaluate concepts with users, and rigorously synthesizing the information afterwards.
+      p I worked with Academia to implement a user-centered product approach by testing ideas and talking to users frequently.
+    .five.columns.m-l-two-columns.framer-module-image
+        img(src="images/academia/academia-research-example.png")
+
+
 

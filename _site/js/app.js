@@ -8,7 +8,7 @@ $(document).ready(function(){
   });
 
   //initialize swiper when document ready  
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('#apps-multiselect .swiper-container', {
     // Optional parameters
     slidesPerView: 6,
     centeredSlides: true,
@@ -26,7 +26,28 @@ $(document).ready(function(){
         slidesPerView: 2
       }
     }
-  })    
+  });
+
+  var academiaSwiper = new Swiper ('#aca-search .swiper-container', {
+    // Optional parameters
+    slidesPerView: 2,
+    centeredSlides: true,
+    spaceBetween: 64,
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    grabCursor: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 1
+      },
+      400: {
+        slidesPerView: 1
+      }
+    }
+  });
+  academiaSwiper.slideTo(8, 0);
 });
 
 

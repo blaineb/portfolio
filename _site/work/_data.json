@@ -18,8 +18,8 @@
    },
     "google-apps": {
      "title": "G Suite",
-     "tagline" : "Sharing interactions for Google's apps",
-     "roles" : "Interaction design",
+     "tagline" : "Sharing interactions for all of Google's apps",
+     "roles" : "Interaction design, visual design",
      "bg" : "#84C3DD",
      "coming_soon" : false,
      "logoImage" : "google-apps/google-logo.png"
